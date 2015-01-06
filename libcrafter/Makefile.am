@@ -107,7 +107,9 @@ libcrafter_la_SOURCES = crafter/Layer.cpp \
 						crafter/Protocols/ICMPv6LayerCraft.cpp \
 						crafter/Protocols/ICMPv6Constructor.cpp \
 						crafter/Protocols/ICMPv6Craft.cpp \
-						crafter/Protocols/ICMPLayer.cpp 
+						crafter/Protocols/ICMPLayer.cpp \
+						crafter/Protocols/ICMPv6NeighborConstructor.cpp \
+						crafter/Protocols/ICMPv6RouterConstructor.cpp 
 																		
 ## Instruct libtool to include ABI version information in the generated shared
 ## library file (.so).  The library ABI version is defined in configure.ac, so
@@ -182,7 +184,8 @@ nobase_crafter_include_HEADERS =crafter.h \
 								crafter/Protocols/NullLoopback.h \
 						        crafter/Protocols/ICMPv6Layer.h \
 						        crafter/Protocols/ICMPv6.h \
-						        crafter/Protocols/ICMPLayer.h						        
+						        crafter/Protocols/ICMPLayer.h \
+						        crafter/Protocols/ICMPv6Neighbor.h						        
 								
 ## The generated configuration header is installed in its own subdirectory of
 ## $(libdir).  The reason for this is that the configuration information put

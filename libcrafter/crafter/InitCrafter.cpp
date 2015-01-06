@@ -34,6 +34,22 @@ void Crafter::InitCrafter() {
 	/* Register the protocol, this is executed only once */
 	Protocol::AccessFactory()->Register(&icmpv6_dummy);
 
+	ICMPv6NeighborSolicitation icmpv6ns_dummy;
+	/* Register the protocol, this is executed only once */
+	Protocol::AccessFactory()->Register(&icmpv6ns_dummy);
+
+	ICMPv6NeighborAdvertisement icmpv6na_dummy;
+	/* Register the protocol, this is executed only once */
+	Protocol::AccessFactory()->Register(&icmpv6na_dummy);
+
+	ICMPv6RouterSolicitation icmpv6rs_dummy;
+	/* Register the protocol, this is executed only once */
+	Protocol::AccessFactory()->Register(&icmpv6rs_dummy);
+
+	ICMPv6RouterAdvertisement icmpv6ra_dummy;
+	/* Register the protocol, this is executed only once */
+	Protocol::AccessFactory()->Register(&icmpv6ra_dummy);
+
 	NullLoopback nullloop_dummy;
 	/* Register the protocol, this is executed only once */
 	Protocol::AccessFactory()->Register(&nullloop_dummy);

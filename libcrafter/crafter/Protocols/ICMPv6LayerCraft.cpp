@@ -27,6 +27,8 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 #include "ICMPv6Layer.h"
 #include "ICMPv6.h"
+#include "ICMPv6Neighbor.h"
+#include "ICMPv6Router.h"
 #include "IPv6.h"
 
 using namespace Crafter;
@@ -44,6 +46,22 @@ ICMPv6Layer* ICMPv6Layer::Build(int type) {
 	case 129 :
 		return new ICMPv6;
 		break;
+
+    case 133:
+        return new ICMPv6RouterSolicitation;
+        break;
+    case 134:
+        return new ICMPv6RouterAdvertisement;
+        break;
+    case 135:
+        return new ICMPv6NeighborSolicitation;
+        break;
+    case 136:
+        return new ICMPv6NeighborAdvertisement;
+        break;
+    case 137:
+        //return new ICMPv6Redirect;
+        break;
 	}
 
 	/* Generic ICMPv6 Header */
